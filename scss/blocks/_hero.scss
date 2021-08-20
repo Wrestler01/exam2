@@ -1,0 +1,128 @@
+.hero {
+    max-width: 1440px;
+    height: 100vh;
+    margin-bottom: 160px;
+    background-position: right bottom 150px, center;
+    background-repeat: no-repeat;
+    background-image: url("/image/tripple.svg"), url("/image/bg-img1.png");
+
+    &__container {
+        margin: 0;
+        padding: 0;
+        top: -4px;
+        left: 154px;
+        max-width: 1121px;
+        position: relative;
+        
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        padding-top: 157px;
+        max-width: 600px;
+        color: #ffffff;
+        margin-bottom: 40px;
+        font-size: 56px;
+        line-height: 56px;
+        font-weight: bold;
+        font-family: $project-font;
+    }
+
+    &__text {
+        max-width: 405px;
+        margin-left: 95px;
+        line-height: 25px;
+        font-style: normal;
+        font-weight: normal;
+        color: #ffffff;
+        margin-bottom: 40px;
+        position: relative;
+        font-size: $font-size;
+        font-family: $main-font;
+
+        &::before {
+            content: "";
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            left: -50%;
+            margin-right: 57px;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 202.5px;
+            background-image: url("/image/line1.svg");
+            position: absolute;
+        }
+
+        &::after {
+            content: "";
+            top: 0;
+            right: -50%;
+            bottom: 0;
+            left: 100%;
+            margin-left: 40px;
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: 447px 138px;
+            background-image: url("/image/line2.svg");
+            position: absolute;
+        }
+    }
+    &__btn {
+        padding: 13px 38px;
+        color: #ffffff;
+        cursor: pointer;
+        border: 1px solid #fcb72b;
+        background-color: #fcb72b;
+
+        &:active {
+            color: #fcb72b;
+            border: 1px solid #fcb72b;
+            background-color: #ffffff;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        margin: 0;
+        padding: 0;
+        max-width: 768px;
+        background-position: 0, left -127px bottom 39px, center;
+        background-image: none,url("/image/line2.svg"), url("/image/bg-img1.png");
+
+        &__container {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            max-width: 573px;
+        }
+
+        &__title {
+            max-width: 573px;
+            margin-bottom: 24px;
+        }
+
+        &__text {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 32px;
+            max-width: 573px;
+            text-align: center;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__btn {
+            margin-left: 180px;
+            margin-bottom: 40px;
+        }
+    }
+}

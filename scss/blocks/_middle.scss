@@ -1,0 +1,129 @@
+.middle {
+    max-width: 1275px;
+    margin: 0;
+    padding: 0;
+    margin-right: 165px;
+    margin-bottom: 200px;
+
+    &__left {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        margin-left: 160px;
+        align-items: center;
+        position: relative;
+        max-width: 856px;
+        margin-bottom: 40px;
+        list-style-type: none;
+        justify-content: space-between;
+
+        &::before {
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: -200px;
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("/image/liner.svg"); 
+        }
+    }
+
+    &__left-item {
+        position: relative;
+    }
+    
+    &__img {
+        width: 96px;
+        height: 96px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin-left: 165px;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        margin-bottom: 27px;
+        font-family: $project-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        max-width: 350px;
+        text-align: left;
+        color: #495567;
+    }
+
+    &__text {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size;
+        line-height: 25px;
+        color: #939CAA;
+        max-width: 350px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .middle {
+        display: flex;
+        align-items: center;
+
+        &__left {
+            max-width: 436px;
+            position: relative;
+            justify-content: space-between;
+            flex-direction: column;
+
+            &::before {
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                top: -204px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url("/image/liner2.svg"); 
+            }
+        }
+
+        &__left-item {
+            margin: 37px 0;
+        }
+
+        &__list {
+            max-width: 398px;
+            flex-direction: column;
+        }
+
+        &__item {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__heading {
+            font-family: $project-font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            color: #495567;
+            max-width: 398px;
+        }
+
+        &__text {
+            max-width: 398px;
+        }
+    }
+}

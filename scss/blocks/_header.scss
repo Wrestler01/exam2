@@ -1,0 +1,134 @@
+.header {
+    margin: 0;
+    max-width: 1110px;
+    margin: 22px 169px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+        width: 420px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        display: none;
+    }
+
+    &__logo {
+        width: 108px;
+        height: 29px;
+        display: block;
+        margin-right: 61.18px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        width: 249px;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        justify-content: space-between;
+    }
+
+    &__item {
+        margin: 0 16px;
+    }
+
+    &__link {
+        line-height: 25px;
+        font-weight: bold;
+        color: #939caa;
+        font-size: $font-size;
+        font-family: $project-font;
+        text-decoration: none;
+
+        &:active {
+            color: #fcb72b;
+        }
+    }
+
+    &__button {
+        padding: 13px 38px;
+        color: #ffffff;
+        cursor: pointer;
+        border: 1px solid #fcb72b;
+        background-color: #fcb72b;
+
+        &:active {
+            color: #fcb72b;
+            border: 1px solid #fcb72b;
+            background-color: #ffffff;
+        }
+    }
+
+    &__right-list {
+        display: none;
+    }
+
+    &__right-btn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 689px;
+        margin: 22px 40px;
+    }    
+
+    &__left {
+        margin: 0;
+        padding: 0;
+        margin-right: 94px;
+        
+        max-width: 415px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        max-width: 375px;
+        margin: 0;
+        padding: 22px 32px;
+        position: relative;
+
+        &__btn {
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            border: 0;
+            padding: 5px 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 0.1s ease all;
+            background-image: url("/image/button.svg");
+
+            &:active {
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                border: 0;
+                padding: 5px 10px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url("/image/delete.svg");
+            }
+        }
+
+        &__logo {
+            width: 75.5px;
+            margin-left: 98.31px;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+}

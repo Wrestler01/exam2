@@ -1,0 +1,22 @@
+.container {
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0;
+        padding: 0;
+    }    
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        max-width: 375px;
+        margin: 0;
+        padding: 0;
+    }    
+}
